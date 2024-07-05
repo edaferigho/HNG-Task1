@@ -12,7 +12,6 @@ app.get('/api/hello', async(req,res)=>{
     const data = response.data
     // const response2 = await axios.get(`https://api.weatherapi.com/v1/current.json?key=${process.env.API_KEY2}&q=${data.city}`);
     const params = req.query
-    console.log(response2.data)
     res.json({
         "client_ip":data.ip,
         "location": data.city,
