@@ -11,6 +11,14 @@ PORT = process.env.PORT || 9000
 
 //This is for testing on localhost
 const mypip = '102.90.45.172'
+app.get('/', (req, res) =>{
+    res.json({
+        "message": "Hello, HNG internship task 1!",
+        "server_ip": serverIP,
+        "port": PORT
+    })
+})
+
 
 app.get('/api/hello', async(req,res)=>{
     const ip = req.headers['x-forwarded-for'] || req.socket.remoteAddress;
